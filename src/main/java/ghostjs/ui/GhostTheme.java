@@ -50,7 +50,7 @@ public final class GhostTheme {
             boolean dark = base != null && luminance(base) < 0.5;
 
             FlatLaf laf = dark ? new FlatDarkLaf() : new FlatLightLaf();
-            UIManager.setLookAndFeel(laf);
+            // UIManager.setLookAndFeel(laf); // FIXME: 20260910 don't update system theme
             FlatLaf.updateUI();
 
             computePalette(dark);
